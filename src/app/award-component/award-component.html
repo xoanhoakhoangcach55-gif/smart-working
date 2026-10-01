@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AP Electronics Digital Award Board</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f6f8;
+            color: #222;
+        }
+
+        /* =========================
+           MAIN BOARD
+        ========================= */
+
+        .board {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* =========================
+           TITLE
+        ========================= */
+
+        .title {
+            text-align: center;
+            font-size: 34px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+
+            margin: 5px 0 22px;
+        }
+
+        /* =========================
+           4 COLUMNS
+        ========================= */
+
+        .columns {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 10px;
+
+            align-items: start;
+        }
+
+        /* =========================
+           COLUMN
+        ========================= */
+
+        .column {
+            border: 1px solid #bcc2cc;
+            border-radius: 15px;
+
+            padding: 10px;
+
+            /* Quan trọng:
+               Không đặt min-height */
+            height: fit-content;
+
+            align-self: start;
+
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* =========================
+           COLUMN TITLE
+        ========================= */
+
+        .column-title {
+            width: 100%;
+
+            text-align: center;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            line-height: 1.3;
+
+            min-height: 44px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           AWARD
+        ========================= */
+
+        .award {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+
+            margin-bottom: 14px;
+        }
+
+        /* Không tạo khoảng trống
+           dưới ảnh cuối */
+        .award:last-child {
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           IMAGE
+        ========================= */
+
+        .award img {
+            display: block;
+
+            width: 90%;
+            height: 150px;
+
+            object-fit: cover;
+
+            background: white;
+
+            border: 7px solid #111;
+
+            box-shadow:
+                0 1px 3px rgba(0, 0, 0, 0.25);
+        }
+
+        /* =========================
+           FT-IT AWARD
+        ========================= */
+
+        .ftit .award img {
+            width: 82%;
+            height: 105px;
+
+            border: 2px solid #aaa;
+        }
+
+        /* =========================
+           OTHER AWARDS
+        ========================= */
+
+        .other .award img {
+            width: 88%;
+            height: 110px;
+
+            border: 7px solid #111;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .footer {
+            text-align: center;
+
+            margin-top: 8px;
+
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .columns {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .title {
+                font-size: 28px;
+            }
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 550px) {
+
+            body {
+                padding: 12px 8px;
+            }
+
+            .columns {
+                grid-template-columns: 1fr;
+            }
+
+            .title {
+                font-size: 24px;
+
+                margin-bottom: 15px;
+            }
+
+            .column-title {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="board">
+
+        <!-- ==================================
+             TITLE
+        =================================== -->
+
+        <h1 class="title">
+            AP ELECTRONICS DIGITAL AWARD BOARD
+        </h1>
+
+
+        <!-- ==================================
+             COLUMNS
+        =================================== -->
+
+        <div class="columns">
+
+
+            <!-- ==================================
+                 COLUMN 1
+            =================================== -->
+
+            <section class="column">
+
+                <div class="column-title">
+                    LG Supplier 21<sup>st</sup> PLI Task: Award
+                    <br>
+                    (Silver Prize, 7M VND)
+                </div>
+
+
+                <div class="award">
+
+                    <img
+                        src="https://picsum.photos/500/300?random=1"
+                        alt="LG Supplier Award"
+                    >
+
+                </div>
+
+                <div class="award">
+
+                    <img
+                        src="https://picsum.photos/500/300?random=1"
+                        alt="ILO 2020 Award"
+                    >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 COLUMN 2
+            =================================== -->
+
+            <section class="column">
+
+                <div class="column-title">
+                    Q-Bank, ILO Award
+                </div>
+
+
+                <div class="award">
+
+                    <img
+                        src="https://picsum.photos/500/300?random=1"
+                        alt="Q-Bank Award"
+                    >
+
+                </div>
+
+
+                <div class="award">
+
+                    <img
+                        src="https://picsum.photos/500/300?random=1"
+                        alt="LOSE NASBAN Improvement Task"
+                    >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 COLUMN 3
+            =================================== -->
+
+            <section class="column ftit">
+
+                <div class="column-title">
+                    FT-IT Award
+                </div>
+
+
+                <div class="award">
+
+                    <img
+                        src="https://picsum.photos/500/300?random=1"
+                        alt="FT-IT Award 1"
+                    >
+
+                </div>
+
+
+                <div class="award">
+
+                    <img
+                        src="https://picsum.photos/500/300?random=1"
+                        alt="FT-IT Award 2"
+                    >
+
+                </div>
+
+
+                <div class="award">
+
+                    <img
+                        src="https://picsum.photos/500/300?random=1"
+                        alt="FT-IT Award 3"
+                    >
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ==================================
+                 COLUMN 4
+            =================================== -->
+
+            <section class="column other">
+
+                <div class="column-title">
+                    Other Awards
+                </div>
+
+
+                <div class="award">
+
+                    <img
+                        src="https://picsum.photos/500/300?random=1"
+                        alt="Other Award 1"
+                    >
+
+                </div>
+
+
+                <div class="award">
+
+                    <img
+                        src="https://picsum.photos/500/300?random=1"
+                        alt="Other Award 2"
+                    >
+
+                </div>
+
+
+                <div class="award">
+
+                    <img
+                        src="https://picsum.photos/500/300?random=1"
+                        alt="Other Award 3"
+                    >
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- ==================================
+             FOOTER
+        =================================== -->
+
+        <div class="footer">
+            Đăng giải thưởng
+        </div>
+
+    </div>
+</body>
+</html>
